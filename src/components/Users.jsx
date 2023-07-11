@@ -12,11 +12,9 @@ const Users = () => {
 
     const users = useSelector(state => state.users.users);
     const dispatch = useDispatch();
-    console.log(users);
-
+    
     const handleDelete = (id)=>{
         axios.delete(`http://localhost:5000/deleteUser/${id}`).then(res =>{
-            console.log(res)
             dispatch(deleteUser({id}))
         }).catch(err=>{
             console.log(err);
