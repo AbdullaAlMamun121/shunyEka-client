@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/users');
+        const res = await axios.get('https://shuny-eka-server-eight.vercel.app/users');
         dispatch(getUser(res.data));
         console.log(res)
       } catch (err) {

@@ -14,7 +14,7 @@ const Users = () => {
     const dispatch = useDispatch();
     
     const handleDelete = (id)=>{
-        axios.delete(`http://localhost:5000/deleteUser/${id}`).then(res =>{
+        axios.delete(`https://shuny-eka-server-eight.vercel.app/deleteUser/${id}`).then(res =>{
             dispatch(deleteUser({id}))
         }).catch(err=>{
             console.log(err);

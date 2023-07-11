@@ -38,12 +38,12 @@ const CreateUser = () => {
             phone
         };
         if (user) {
-            axios.put(`http://localhost:5000/updateUser/${id}`, userData).then( res =>{
+            axios.put(`https://shuny-eka-server-eight.vercel.app/updateUser/${id}`, userData).then( res =>{
                 dispatch(updateUser({id,name,email,phone}));
                 navigate('/');
             }).catch(err => console.error(err));
         } else {
-            axios.post('http://localhost:5000/addUser', userData).then(res => {
+            axios.post('https://shuny-eka-server-eight.vercel.app/addUser', userData).then(res => {
                 dispatch(addUser(res.data));
                 navigate('/');
             }).catch(err => console.error(err));
